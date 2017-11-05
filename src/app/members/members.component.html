@@ -3,8 +3,9 @@
 
 
 <hr>
-<div *ngIf ="isTrue ; else firstTemplate"> Display me</div>
-<ng-template #firstTemplate >My Template </ng-template>
+<div *ngIf ="isTrue; then firstTemplate else secondTemplate"> Display me</div>
+<ng-template #firstTemplate >My First Template </ng-template>
+<ng-template #secondTemplate >My Second Template </ng-template>
 
 
 

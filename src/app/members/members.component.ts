@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class MemberComponent  { 
 	title:string = 'My Members'; 
 	 checkbox1:boolean = true;
-	 isTrue:boolean = false;
+	 isTrue:boolean = true;
 }
 
 
