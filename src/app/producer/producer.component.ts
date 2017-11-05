@@ -15,7 +15,10 @@ export class ProducerComponent  {
 			this.items.push(this.newItem);
 
 		}
+	}
 
+	removeItem=function(index:number){
+		this.items.splice(index,1)
 	}
 }
 

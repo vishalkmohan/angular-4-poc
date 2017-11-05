@@ -9,9 +9,9 @@
 		<button (click)="pushItem()" >Add</button>
 	</div>
 	<ul>
-		<li *ngFor="let item of items">
+		<li *ngFor="let item of items ; let i=index">
 		{{item}}
-		<span>x</span>
+		<span (click)="removeItem(i)">x</span>
 		</li>
 	</ul>
 </div>
