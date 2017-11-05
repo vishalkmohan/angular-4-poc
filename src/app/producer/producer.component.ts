@@ -7,13 +7,13 @@ import { Component } from '@angular/core';
 })
 export class ProducerComponent  { 
 	title:string = 'My Producer'; 
-	items:string[]=["Books","Pen","Pensil"];
+	items:string[]=["Books","Pensil"];
 
-	newItem="";
+	newItem:string="";
 	pushItem = function{
 		if(this.newItem!=""){
-		items.push(this.newitem);
-			this.newItem="";
+			this.items.push(this.newItem);
+
 		}
 
 	}
