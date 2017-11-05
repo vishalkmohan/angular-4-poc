@@ -7,6 +7,16 @@ import { Component } from '@angular/core';
 })
 export class ProducerComponent  { 
 	title:string = 'My Producer'; 
+	items:string[]=["Books","Pen","Pensil"];
+
+	newItem="";
+	pushItem = function{
+		if(this.newItem!=""){
+		items.push(this.newitem);
+			this.newItem="";
+		}
+
+	}
 }
 
 

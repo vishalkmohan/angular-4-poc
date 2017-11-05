@@ -3,11 +3,17 @@
 	  <div class="col-md-12">
 	  	
 <div class ="main">
-	<h1>Item's List</h1>
+	<h2>Item List</h2>
 	<div class="addItem">
-		<input placeHolder="Add Item" class="addText" >
+		<input [(ngModel)]="newItem" placeHolder="Add Item" class="addText" >
 		<button>Add</button>
 	</div>
+	<ul>
+		<li *ngFor="let item of items">
+		{{item}}
+		<span>x</span>
+		</li>
+	</ul>
 </div>
 
 
