@@ -7,6 +7,7 @@ import { AppComponent }  from './app.component';
 import { ProductComponent }  from './product/product.component';
 import { MemberComponent }  from './members/members.component';
 import { ProducerComponent }  from './producer/producer.component';
+import { SortPipe } from './app.sort';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,
@@ -20,7 +21,7 @@ import { ProducerComponent }  from './producer/producer.component';
   path:'producer',
     component:ProducerComponent
   }])],
-  declarations: [ AppComponent,ProductComponent,MemberComponent,ProducerComponent ],
+  declarations: [ SortPipe, AppComponent,ProductComponent,MemberComponent,ProducerComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

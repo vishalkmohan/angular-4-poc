@@ -10,7 +10,7 @@
 	</div>
 	<ul>
 		<li *ngFor="let item of items ; let i=index">
-		{{item | lowercase}}
+		{{item | lowercase | myPipe :'-'}}
 		<span (click)="removeItem(i)">x</span>
 		</li>
 	</ul>
