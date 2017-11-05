@@ -1,4 +1,4 @@
-<h2>My Members</h2>
+<h2>Member Details</h2>
 <input type="checkbox" [checked]="checkbox1" /> Please disable
 
 
@@ -6,7 +6,32 @@
 <div *ngIf ="isTrue; then firstTemplate else secondTemplate"> Display me</div>
 <ng-template #firstTemplate >My First Template </ng-template>
 <ng-template #secondTemplate >My Second Template </ng-template>
+<hr>
+<h2>Add Membership</h2>
 
 
+<form class ="container">
+	<div class="row">
+		<div class="col-md-2" >Name </div><div class="col-md-3" ><input placeholder="Name" type="name" name="name"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-2" >Address </div><div class="col-md-3" ><input placeholder="Address" type="address" name="address"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-2" >Country </div>
+		<div class="col-md-3" >
+			<select name ="country">
+				<option value="India">India</option>
+				<option value="America">America</option>
+				<option value="Pakistan">Pakistan</option>
+				<option value="China">China</option>
+			</select>
+		</div>
+	</div>
+	<div class="row" >
+		<div class="col-md-5" ><input type="submit" value="submit"> </div>
+	</div>
+
+</form>
 
 
