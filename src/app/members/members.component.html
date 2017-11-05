@@ -2,3 +2,10 @@
 <input type="checkbox" [checked]="checkbox1" /> Please disable
 
 
+<hr>
+<div *ngIf ="isTrue ; else firstTemplate"> Display me</div>
+<ng-template #firstTemplate >My Template </ng-template>
+
+
+
+
