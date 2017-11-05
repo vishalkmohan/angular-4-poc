@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent }  from './app.component';
 import { ProductComponent }  from './product/product.component';
 import { MemberComponent }  from './members/members.component';
+import { ProducerComponent }  from './producer/producer.component';
 
 @NgModule({
   imports:      [ BrowserModule,
@@ -14,8 +15,11 @@ import { MemberComponent }  from './members/members.component';
   },{
 	path:'product',
   	component:ProductComponent
+  },{
+  path:'producer',
+    component:ProducerComponent
   }])],
-  declarations: [ AppComponent,ProductComponent,MemberComponent ],
+  declarations: [ AppComponent,ProductComponent,MemberComponent,ProducerComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
