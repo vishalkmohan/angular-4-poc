@@ -2,14 +2,13 @@
 <input type="checkbox" [checked]="checkbox1" /> Please disable
 
 
-<hr>
 <div *ngIf ="isTrue; then firstTemplate else secondTemplate"> Display me</div>
 <ng-template #firstTemplate >My First Template </ng-template>
 <ng-template #secondTemplate >My Second Template </ng-template>
 <hr>
 <h2>Add Membership</h2>
 
-
+<hr><b>Template Driven Form :</b>
 <form class ="container" 
 	#userForm="ngForm" 
 	(ngSubmit)="addUser(userForm.value)" >
@@ -40,4 +39,38 @@
 
 </form>
 
+<hr><b>Model Driven Form :</b>
+<form class ="container" 
+	[formGroup]="myForm"
+	(ngSubmit)="addMembership(myForm.value)" >
+	<div class="row">
+		<div class="col-md-2" >Membersip Id </div>
+		<div class="col-md-3" >
+			<input placeholder="Membersip Id" type="text" name="memberid" 
+			formControlName="memberid">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-2" >Member Bank </div>
+		<div class="col-md-3" >
+			<input placeholder="Member Bank" type="text" name="memberbank" 
+			formControlName="memberbank" >
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-2" >Account Type </div>
+		<div class="col-md-3" >
+			<select name ="accounttype" formControlName="accounttype">
+				<option value="savings">Savings</option>
+				<option value="current">Current</option>
+				<option value="creditcard">Credit Card</option>
+				<option value="debitcard">Debit Card</option>
+			</select>
+		</div>
+	</div>
+	<div class="row" >
+		<div class="col-md-5" ><input type="submit" value="submit"> </div>
+	</div>
+
+</form>
 
