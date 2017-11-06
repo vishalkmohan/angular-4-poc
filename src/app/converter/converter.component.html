@@ -7,10 +7,10 @@
         <div class="panel-footer">
         <form [formGroup]='myForm'>
           <table class="table">
-            <tr><td>Decimal</td><td><input type="text" name="decimal" placeholder="Decimal" FormControlName='decimal'></td></tr>
-            <tr><td>Binary</td><td><input type="text" name="binary" placeholder="Binary" FormControlName='binary'></td></tr>
-            <tr><td>Octal</td><td><input type="text" name="octal" placeholder="Octal" FormControlName='octal' ></td></tr>
-            <tr><td>Hexa</td><td><input type="text" name="hexa" placeholder="Hexa" FormControlName='hexa'></td></tr>
+            <tr><td>Decimal</td><td><input type="text" name="decimal" placeholder="Decimal" formControlName='decimal' (ngModelChange)="decimalChange($event)" ></td></tr>
+            <tr><td>Binary</td><td><input type="text" name="binary" placeholder="Binary" formControlName='binary' (ngModelChange)="binaryChange($event)"  ></td></tr>
+            <tr><td>Octal</td><td><input type="text" name="octal" placeholder="Octal" formControlName='octal' (ngModelChange)="octalChange($event)" ></td></tr>
+            <tr><td>Hexa</td><td><input type="text" name="hexa" placeholder="Hexa" formControlName='hexa' (ngModelChange)="hexaChange($event)" ></td></tr>
           </table>
          </form> 
           
