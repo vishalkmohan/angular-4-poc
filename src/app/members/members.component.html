@@ -10,17 +10,23 @@
 <h2>Add Membership</h2>
 
 
-<form class ="container">
+<form class ="container" 
+	#userForm="ngForm" 
+	(ngSubmit)="addUser(userForm.value)" >
 	<div class="row">
-		<div class="col-md-2" >Name </div><div class="col-md-3" ><input placeholder="Name" type="name" name="name"></div>
+		<div class="col-md-2" >Name </div><div class="col-md-3" >
+			<input placeholder="Name" type="text" name="name" ngModel>
+		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-2" >Address </div><div class="col-md-3" ><input placeholder="Address" type="address" name="address"></div>
+		<div class="col-md-2" >Address </div><div class="col-md-3" >
+			<input placeholder="Address" type="text" name="address" ngModel>
+		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-2" >Country </div>
 		<div class="col-md-3" >
-			<select name ="country">
+			<select name ="country" ngModel>
 				<option value="India">India</option>
 				<option value="America">America</option>
 				<option value="Pakistan">Pakistan</option>
